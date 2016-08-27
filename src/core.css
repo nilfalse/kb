@@ -1,0 +1,61 @@
+html,body,#application {
+  height: 100%;
+}
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #fafafa;
+  font: 18px Kurale, serif;
+  color: black;
+}
+h1 {
+  margin: 0;
+  font: 48px Londrina Shadow, serif;
+}
+
+/* fredericka-the-great-regular - latin */
+@font-face {
+  font-family: 'Fredericka the Great';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Fredericka the Great'), local('FrederickatheGreat'),
+       url('fonts/fredericka-the-great-v5-latin-regular.woff2') format('woff2'),
+       url('fonts/fredericka-the-great-v5-latin-regular.woff') format('woff');
+}
+/* londrina-shadow-regular - latin */
+@font-face {
+  font-family: 'Londrina Shadow';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Londrina Shadow'), local('LondrinaShadow-Regular'),
+       url('fonts/londrina-shadow-v4-latin-regular.woff2') format('woff2'),
+       url('fonts/londrina-shadow-v4-latin-regular.woff') format('woff');
+}
+/* kurale-regular - latin/cyrillic */
+@font-face {
+  font-family: 'Kurale';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Kurale'), local('Kurale-Regular'),
+       url('fonts/kurale-v1-latin_cyrillic-regular.woff2') format('woff2'),
+       url('fonts/kurale-v1-latin_cyrillic-regular.woff') format('woff');
+}
+
+::-webkit-scrollbar {
+    width: 12px
+}
+::-webkit-scrollbar-track {
+    background-color: #eaeaea;
+    border-radius: 0;
+    box-shadow: none;
+    border: 0
+}
+::-webkit-scrollbar-thumb {
+    background-color: #cecece;
+    border-radius: 0;
+    box-shadow: none;
+    border: 0
+}
+::-webkit-scrollbar-thumb:hover {
+    background-color: #aaa
+}

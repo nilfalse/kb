@@ -1,0 +1,55 @@
+.AppBar {
+    background-color: #fff;
+    border-bottom: 1px solid rgba(0,0,0,0.075);
+    margin-bottom: -1px;
+    box-shadow: 0 0 5px rgba(0,0,0,0.1);
+}
+
+.AppBar__header {
+    display: flex;
+    flex: 1 0 auto;
+    justify-content: space-between;
+    align-items: flex-end;
+    flex-wrap: wrap;
+    max-width: 1024px;
+    margin: 0 auto;
+}
+
+.AppBar__logo {
+    /* TODO: render logo to svg */
+    font: 72px Fredericka the Great, serif;
+}
+.AppBar__logo a {
+    text-decoration: none;
+    color: #333;
+}
+.AppBar__logo a:hover {
+    color: #555;
+}
+
+.AppBar__nav {
+    padding-bottom: 2px;
+}
+.AppBar__nav li {
+    display: inline;
+}
+.AppBar__nav a {
+    text-decoration: none;
+    padding: 0 20px;
+    font-size: 24px;
+    color: #333;
+    white-space: nowrap;
+    text-transform: lowercase;
+}
+.AppBar__nav a:hover {
+    background-color: #fff;
+    color: #555;
+}
+
+.AppBar__nav-item_selected {
+    border: solid transparent;
+    padding-left: 17px;
+    padding-right: 17px;
+    border-bottom-width: 3px;
+    border-color: transparent transparent #d26911;
+}
