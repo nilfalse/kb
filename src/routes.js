@@ -3,21 +3,24 @@ import { Router, Route, IndexRoute } from 'react-router';
 import { Provider } from 'react-redux';
 
 import store, { history } from './store';
-import AppShell from './components/app-shell';
 import Home from './components/home';
-import Panoramas from './components/panoramas';
+import PanoramaGrid from './components/panorama-grid';
+import Panorama from './components/panorama-single';
 import CV from './components/cv';
-import NotFound from './components/not-found';
+import NoMatch from './components/no-match';
 
 
-const routes = (
+const routes = (Root) => (
   <Provider store={ store }>
     <Router history={ history }>
-      <Route path="/" component={ AppShell }>
+      <Route path="/" component={ Root }>
         <IndexRoute component={ Home } />
-        <Route path="/panoramas" component={ Panoramas } />
-        <Route path="/cv" component={ CV } />
-        <Route path="*" component={ NotFound } />
+        <Route path="panoramas">
+          <IndexRoute component={ PanoramaGrid } />
+          <Route path=":panoramaId" component={ Panorama } />
+        </Route>
+        <Route path="cv" component={ CV } />
+        <Route path="*" component={ NoMatch } />
       </Route>
     </Router>
   </Provider>

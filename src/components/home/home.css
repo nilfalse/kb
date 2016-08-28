@@ -1,0 +1,6 @@
+.Home__yandex-style {
+    display: inline-block;
+}
+.Home__yandex-style:first-letter {
+    color: red;
+}

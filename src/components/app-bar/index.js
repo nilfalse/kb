@@ -10,12 +10,8 @@ const AppBar = (props) => (
     <div className="AppBar__header">
       <h1 className="AppBar__logo"><Link to='/'>nilfalse</Link></h1>
       <nav className="AppBar__nav">
-        <li><Link className={classnames({
-          'AppBar__nav-item_selected': true
-        })} to='/panoramas'>Panoramas</Link></li>
-        <li><Link className={classnames({
-          'AppBar__nav-item_selected': false
-        })} to='/cv'>Сurriculum vitæ</Link></li>
+        <li><Link activeClassName='AppBar__nav-item_selected' to='/panoramas'>Panoramas</Link></li>
+        <li><Link activeClassName='AppBar__nav-item_selected' to='/cv'>Сurriculum vitæ</Link></li>
       </nav>
     </div>
   </header>
