@@ -1,0 +1,24 @@
+{
+  "name": "kb",
+  "version": "0.0.1",
+  "description": "",
+  "scripts": {
+    "build": "make"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nilfalse/kb.git"
+  },
+  "keywords": [],
+  "author": "Yaroslav Ilin <nilfalse@yandex.com>",
+  "bugs": {
+    "url": "https://github.com/nilfalse/kb/issues"
+  },
+  "homepage": "https://nilfalse.com/kb/",
+  "dependencies": {
+    "node-fetch": "*"
+  },
+  "devDependencies": {
+    "opn": "*"
+  }
+}
