@@ -1,0 +1,23 @@
+{
+  "name": "kb",
+  "version": "0.0.1",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "make",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nilfalse/kb.git"
+  },
+  "keywords": [],
+  "author": "",
+  "bugs": {
+    "url": "https://github.com/nilfalse/kb/issues"
+  },
+  "homepage": "https://nilfalse.com/kb/",
+  "devDependencies": {
+    "node-fetch": "2.1.2"
+  }
+}
