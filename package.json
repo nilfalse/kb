@@ -2,17 +2,15 @@
   "name": "kb",
   "version": "0.0.1",
   "description": "",
-  "main": "index.js",
   "scripts": {
-    "start": "make",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "make"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/nilfalse/kb.git"
   },
   "keywords": [],
-  "author": "",
+  "author": "Yaroslav Ilin <nilfalse@yandex.com>",
   "bugs": {
     "url": "https://github.com/nilfalse/kb/issues"
   },
