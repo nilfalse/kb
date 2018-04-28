@@ -26,4 +26,4 @@ $(DOCS) : $(DESTINATION)/%.html : %.md
 
 $(DESTINATION)/%.html :
 	mkdir -p $(shell dirname '$@')
-	./_tools/markdown.js < $^ > $@
+	./_tools/markdown.pl < $^ > $@
