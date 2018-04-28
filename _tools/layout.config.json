@@ -1,0 +1,7 @@
+{
+  "title": "Knowledge Base",
+  "description_words_count_limit": 40,
+
+  "internal_domains": ["nilfalse.com"],
+  "nofollow_whitelist": ["nilfalse.com", "github.com"]
+}

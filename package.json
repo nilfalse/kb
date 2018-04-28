@@ -16,7 +16,7 @@
   },
   "homepage": "https://nilfalse.com/kb/",
   "dependencies": {
-    "node-fetch": "*"
+    "jsdom": "11.9.0"
   },
   "devDependencies": {
     "opn": "*"
