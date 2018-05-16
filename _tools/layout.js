@@ -10,15 +10,16 @@ function main ([ input, dom ]) {
   const fragment = JSDOM.fragment(input);
   const { document } = dom.window;
 
-  enrichTitle(document, fragment.querySelector('h1').textContent);
-  enrichDescription(document, extractDescription(fragment));
-  enrichAnchors(fragment);
+  enhanceTitle(document, fragment.querySelector('h1').textContent);
+  enhanceDescription(document, extractDescription(fragment));
+  enhanceAnchors(fragment);
+  enhanceImages(fragment, document);
 
   document.getElementById('content').appendChild(fragment);
   return dom.serialize();
 }
 
-function enrichTitle (document, title) {
+function enhanceTitle (document, title) {
   const titleTags = [
     'meta[name~="twitter:title"]',
     'meta[property~="og:title"]',
@@ -46,7 +47,7 @@ function extractDescription (fragment) {
   return words.join(' ');
 }
 
-function enrichDescription (document, description) {
+function enhanceDescription (document, description) {
   const descriptionTags = [
     'meta[name~="description"]',
     'meta[name~="twitter:description"]',
@@ -60,7 +61,7 @@ function enrichDescription (document, description) {
   );
 }
 
-function enrichAnchors (fragment) {
+function enhanceAnchors (fragment) {
   Array.prototype.forEach.call(
     fragment.querySelectorAll('a'),
     function (a) {
@@ -69,6 +70,25 @@ function enrichAnchors (fragment) {
       }
       if (!config.internal_domains.includes(a.hostname)) {
         a.target = '_blank';
+      }
+    }
+  );
+}
+
+function enhanceImages (fragment, document) {
+  function wrapInNoscript (img) {
+    const noscript = document.createElement('noscript');
+    noscript.dataset.gif = img.src;
+    noscript.dataset.alt = img.alt;
+    img.parentNode.replaceChild(noscript, img);
+    noscript.appendChild(img);
+  }
+
+  Array.prototype.forEach.call(
+    fragment.querySelectorAll('img'),
+    function (img) {
+      if ('.gif' === img.src.substr(-4).toLowerCase()) {
+        wrapInNoscript(img);
       }
     }
   );

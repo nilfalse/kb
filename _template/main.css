@@ -2,6 +2,7 @@ html,body{margin: 0;padding:0;height:100%}
 h1,h2,h3,h4,h5,h6,blockquote{margin:0}
 
 #content {
+  box-sizing: border-box;
   max-width: 972px;
   margin: 0 auto;
   padding: 40px;
@@ -29,8 +30,25 @@ h1,h2,h3,h4,h5,h6,blockquote{margin:0}
 }
 #content a:hover{text-decoration:underline}
 
+#content img {
+  max-width: 100%;
+}
+
 #content blockquote {
   padding: 0 1rem;
   color: #6a737d;
   border-left: .25rem solid #dfe2e5;
+}
+
+#content a.expandable-gif:hover {
+  text-decoration: none;
+  border-bottom: 1px dashed;
+}
+
+@media only screen and (max-width: 767px) {
+  #content img {
+    max-width: none;
+    margin-left: -40px;
+    width: calc(100% + 80px);
+  }
 }
