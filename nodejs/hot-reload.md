@@ -18,3 +18,5 @@ TODO: describe the constraint of separation of code and data
 1. [Debugging Node.js with Google Chrome](https://medium.com/p/4965b5f910f4)
 1. [Hacker News - Hot code reloading with Erlang](https://news.ycombinator.com/item?id=10669131)
 1. [Zero downtime - Hot code deployments](https://csparpa.github.io/blog/2016/10/zero-downtime-hot-code-deployments.html)
+1. [Live Editing JavaScript with Webpack (Part III)](https://jlongster.com/Backend-Apps-with-Webpack--Part-III)
+
